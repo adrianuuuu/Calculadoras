@@ -1,0 +1,166 @@
+    #calculadora-financeira {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 25px;
+      background: #f8f9fa;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+      font-family: Arial, sans-serif;
+    }
+
+    #calculadora-financeira h2 {
+      text-align: center;
+      margin-bottom: 10px;
+      color: black;
+    }
+
+    #calculadora-financeira p {
+      text-align: center;
+      color: black;
+      margin-bottom: 25px;
+    }
+
+    .input-group {
+      margin-bottom: 20px;
+    }
+
+    .input-group label {
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: black;
+      margin-bottom: 6px;
+    }
+
+    .inline-inputs {
+      display: flex;
+      gap: 10px;
+    }
+
+    #calculadora-financeira input,
+    #calculadora-financeira select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+
+    #calculadora-financeira input:focus,
+    #calculadora-financeira select:focus {
+      outline: none;
+      /* background-color: var(--azul-marinho); */
+      box-shadow: 0 0 5px rgba(0,119,204,0.3);
+    }
+
+    .botoes {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      margin-top: 15px;
+    }
+
+    .botoes button {
+      flex: 1;
+      padding: 12px;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    #calcular {
+      background-color: var(--azul-marinho);
+      color: #fff;
+    }
+
+    #calcular:hover {
+      background: #005fa3;
+    }
+
+    #limpar {
+      background: #e0e0e0;
+      color: #333;
+    }
+
+    #limpar:hover {
+      background: #cfcfcf;
+    }
+
+    /* Resultado */
+    #resultado {
+      margin-top: 30px;
+      overflow: hidden;
+      opacity: 0;
+      transform: translateY(-10px);
+      transition: all 0.4s ease;
+    }
+
+    #resultado.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    #resultado table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+
+    #resultado th,
+    #resultado td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: center;
+    }
+
+    #resultado th {
+      background-color: var(--azul-marinho);
+      color: #fff;
+    }
+
+    .juros-equacao{
+        display: flex;
+        height: 65px;
+        margin: auto;
+    }
+ 
+    .fin-th{
+      padding: 3 px;
+      background-color: var(--azul-marinho);
+      color: white;
+    }
+
+    .fin-td{
+      padding: 6px 9px;
+    }
+
+    .value-table{
+      width: 100%;
+      align-items: center;
+    }
+
+    .mobile-info{
+      display: none;
+    }
+
+    @media (max-width: 1380px){
+      .value-table{
+        display: none;
+      }
+
+      .mobile-info{
+        display: block;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      h3{
+        background-color: var(--azul-marinho);
+        color: white;
+        padding: 3px;
+      }
+    }

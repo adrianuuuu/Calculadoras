@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Científica</title>
+    <link rel="stylesheet" href="../css/style2.css">
+    <link rel="stylesheet" href="../css/cient.css">
+</head>
+<body>
+    <header>
+      <nav class="menu-links" id="menuLinks">
+        <div class="menu" data-menu="Início"><a href="../index.html">Início</a></div>
+        <div class="menu" data-menu="IMC"><a href="./imc.html">IMC</a></div>
+        <div class="menu" data-menu="Bases"><a href="./bases.html">Bases</a></div>
+        <div class="menu" data-menu="Financeira"><a href="./financeira.html">Financeira</a></div>
+        <div class="menu" data-menu="Científica"><a href="./cientifica.html">Científica</a></div>
+      </nav>
+      <div class="menu-toggle" id="menu-toggle">☰</div>
+        <h1>Calculadora Científica</h1>
+        <p>Faça cálculos científicos e complexos de forma rápida e prática</p>
+
+        <nav class="sidebar" id="sidebar">
+          <ul class="menu-box">
+            <li class="has-submenu">
+              <a href="../index.html">Início</a>
+            </li>
+            <li class="has-submenu">
+              <a href="./imc.html">Calculadora IMC</a>
+            </li>
+            <li class="has-submenu">
+              <a href="./bases.html">Bases Numéricas</a>
+            </li>
+            <li class="has-submenu">
+              <a href="./financeira.html">Financeira</a>
+            </li>
+            <li class="has-submenu">
+              <a href="./cientifica.html">Científica</a>
+            </li>
+            <li class="has-submenu">
+              <a href="./geometrica.html">Geometria</a>
+            </li>
+          </ul>
+        </nav>
+    </header>
+    <div id="overlay" class="overlay">
+    </div>
+
+    <main class="page-content"> 
+      <section class="intro-section">
+  <h2 class="intro-subtitle">Descubra como utilizar as principais funções desta calculadora e entenda a lógica por trás de cada uma delas.</h2>
+
+  <div class="intro-content">
+    <h3>Funções Trigonométricas (sin, cos, tan)</h3>
+    <p>Essas funções trabalham com <strong>ângulos</strong> e são muito usadas em geometria e física.</p>
+    <ul>
+      <li><strong>sin(x):</strong> Retorna o <em>seno</em> de um ângulo (em radianos).</li>
+      <li><strong>cos(x):</strong> Retorna o <em>cosseno</em> do ângulo.</li>
+      <li><strong>tan(x):</strong> Retorna a <em>tangente</em>.</li>
+    </ul>
+    <p class="example">Exemplo: sin(π/2) = 1</p>
+
+    <h3>Logaritmos (log e ln)</h3>
+    <p>Os logaritmos são usados em cálculos de crescimento, escalas e juros compostos.</p>
+    <ul>
+      <li><strong>log(x):</strong> Logaritmo de base 10.</li>
+      <li><strong>ln(x):</strong> Logaritmo natural (base <em>e</em> ≈ 2,718).</li>
+    </ul>
+    <p class="example">Exemplo: log(100) = 2, pois 10² = 100</p>
+
+    <h3>Potenciação e Raiz Quadrada (xʸ e √)</h3>
+    <p>Usadas em cálculos de potência e extração de raízes.</p>
+    <ul>
+      <li><strong>xʸ:</strong> Eleva um número <em>x</em> à potência <em>y</em>.</li>
+      <li><strong>√x:</strong> Calcula a <em>raiz quadrada</em> de um número.</li>
+    </ul>
+    <p class="example">Exemplo: 4² = 16 e √9 = 3</p>
+
+    <h3>Constantes Matemáticas (π e e)</h3>
+    <p>Essas constantes aparecem em cálculos trigonométricos e exponenciais.</p>
+    <ul>
+      <li><strong>π (pi):</strong> Relação entre a circunferência e o diâmetro de um círculo (≈ 3,14159).</li>
+      <li><strong>e:</strong> Base dos logaritmos naturais (≈ 2,718).</li>
+    </ul>
+
+    <h3>Fatorial (x!)</h3>
+    <p>Calcula o produto de todos os números inteiros positivos até <em>x</em>.</p>
+    <p class="example">Exemplo: 5! = 5 × 4 × 3 × 2 × 1 = 120</p>
+
+    <h3>Porcentagem (%)</h3>
+    <p>Usada para cálculos de <strong>juros, descontos</strong> e <strong>proporções</strong>.</p>
+    <p class="example">Exemplo: 50 + 10% = 55</p>
+
+    <p class="final-note">
+      Essas são algumas das funções mais úteis da calculadora científica. Explore, pratique e veja como ela pode facilitar cálculos matemáticos, financeiros e científicos do dia a dia.
+    </p>
+  </div>
+</section>
+
+      <section class="calc-container">
+        <h2>Calculadora Científica</h2>
+        <p class="calc-desc">Realize cálculos científicos com precisão. Inclui funções trigonométricas, logarítmicas e exponenciais.</p>
+
+        <div class="sci-calculator">
+          <input type="text" id="display" class="display" readonly>
+
+          <div class="sci-buttons">
+          <button class="btn" onclick="clearDisplay()" title="Limpar tudo">AC</button>
+          <button class="btn" onclick="deleteLast()" title="Apagar último caractere">DEL</button>
+          <button class="btn" onclick="appendValue('(')" title="Abrir parêntese">(</button>
+          <button class="btn" onclick="appendValue(')')" title="Fechar parêntese">)</button>
+          <button class="btn" onclick="appendValue('%')" title="Porcentagem">%</button>
+
+          <button class="btn" onclick="appendValue('sin(')" title="Seno de um ângulo em radianos">sin</button>
+          <button class="btn" onclick="appendValue('cos(')" title="Cosseno de um ângulo em radianos">cos</button>
+          <button class="btn" onclick="appendValue('tan(')" title="Tangente de um ângulo em radianos">tan</button>
+          <button class="btn" onclick="appendValue('log(')" title="Logaritmo base 10">log</button>
+          <button class="btn" onclick="appendValue('ln(')" title="Logaritmo natural (base e)">ln</button>
+
+          <button class="btn" onclick="appendValue('^')" title="Potência (x elevado a y)">xʸ</button>
+          <button class="btn" onclick="appendValue('√(')" title="Raiz quadrada">√</button>
+          <button class="btn" onclick="appendValue('π')" title="Constante pi (≈ 3.14159)">π</button>
+          <button class="btn" onclick="appendValue('e')" title="Constante de Euler (≈ 2.718)">e</button>
+          <button class="btn" onclick="appendValue('!')" title="Fatorial (n × n-1 × ...)">x!</button>
+
+          <button class="btn-num" onclick="appendValue('7')">7</button>
+          <button class="btn-num" onclick="appendValue('8')">8</button>
+          <button class="btn-num" onclick="appendValue('9')">9</button>
+          <button class="btn operator" onclick="appendValue('/')" title="Divisão">÷</button>
+
+          <button class="btn operator" onclick="appendValue('*')" title="Multiplicação">×</button>
+          <button class="btn-num" onclick="appendValue('4')">4</button>
+          <button class="btn-num" onclick="appendValue('5')">5</button>
+          <button class="btn-num" onclick="appendValue('6')">6</button>
+
+          <button class="btn operator" onclick="appendValue('-')" title="Subtração">−</button>
+          <button class="btn operator" onclick="appendValue('+')" title="Adição">+</button>
+          <button class="btn-num" onclick="appendValue('1')">1</button>
+          <button class="btn-num" onclick="appendValue('2')">2</button>
+          <button class="btn-num" onclick="appendValue('3')">3</button>
+
+          <button class="btn" onclick="appendValue('.')" title="Ponto decimal">.</button>
+          <button class="btn equal" onclick="calculate()" title="Calcular resultado">=</button>
+          <button class="btn-num" onclick="appendValue('0')">0</button>
+          
+         </div>
+        </div>
+      </section>
+
+        
+    </main>
+
+    <footer>
+        <p>&copy; 2025 - Projeto de Calculadoras Online</p>
+    </footer>
+    <script src="../js/script.js"></script>
+    <script src="../js/cient.js"></script>
+</body>
+</html>
