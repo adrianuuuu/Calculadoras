@@ -1,0 +1,97 @@
+    .base-th{
+      padding: 12px 18px;
+      background-color: var(--azul-marinho);
+      color: white;
+    }
+
+    .base-td{
+      padding: 6px 9px;
+    }
+
+    .value-table{
+      width: 100%;
+      align-items: center;
+    }
+
+/* Estilo base para a seção da calculadora */
+#conversor-bases {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #f8f9fa;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+  font-family: Arial, sans-serif;
+}
+
+#conversor-bases h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: black;
+}
+
+#conversor-bases h3 {
+  margin: 20px 0 10px;
+  color: black;
+}
+
+/* Inputs e selects */
+#conversor-bases label {
+  display: block;
+  margin: 10px 0 5px;
+  font-weight: bold;
+  color: black;
+}
+
+#conversor-bases input,
+#conversor-bases select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+#conversor-bases input:focus,
+#conversor-bases select:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(0,119,204,0.3);
+}
+
+/* Botão */
+#conversor-bases button {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: var(--azul-marinho);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#conversor-bases button:hover {
+  background: #005fa3;
+}
+
+/* Resultado */
+#resultadoDireto {
+  margin-top: 20px;
+  padding: 15px;
+  background: #eef6ff;
+  border: 1px solid #cce0ff;
+  border-radius: 6px;
+  font-size: 15px;
+  color: #333;
+}
+
+/* Separador */
+#conversor-bases hr {
+  margin: 25px 0;
+  border: none;
+  border-top: 1px solid #ddd;
+}
