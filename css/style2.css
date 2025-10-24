@@ -225,4 +225,8 @@
         header{
         text-align: right;
       }
+         
+      .p-header{
+      font-size: 13px;
+    }
     }
