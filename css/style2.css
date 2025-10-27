@@ -230,3 +230,10 @@
       font-size: 13px;
     }
     }
+
+      @media (max-width: 328px){
+       .h1-header{
+         font-size: 20px;
+    }
+  }
+
